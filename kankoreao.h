@@ -2,21 +2,27 @@
 #define KANKOREAO_H
 
 #include <QMainWindow>
+#include <QUrl>
 
 namespace Ui {
-class Kankoreao;
+class KankoreAO;
 }
 
-class Kankoreao : public QMainWindow
+class KankoreAO : public QMainWindow
 {
     Q_OBJECT
     
 public:
-    explicit Kankoreao(QWidget *parent = 0);
-    ~Kankoreao();
+    explicit KankoreAO(QWidget *parent = 0);
+    ~KankoreAO();
     
+private slots:
+    void on_webView_urlChanged(const QUrl &arg1);
+
 private:
-    Ui::Kankoreao *ui;
+    void initWebvew();
+    Ui::KankoreAO *ui;
+    static const QUrl url;
 };
 
 #endif // KANKOREAO_H
