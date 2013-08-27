@@ -66,5 +66,22 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>webView</sender>
+   <signal>titleChanged(QString)</signal>
+   <receiver>KankoreAO</receiver>
+   <slot>setWindowTitle(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

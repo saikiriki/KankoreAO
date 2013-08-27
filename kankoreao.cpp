@@ -1,7 +1,7 @@
 #include "kankoreao.h"
 #include "ui_kankoreao.h"
 
-const QUrl KankoreAO::url = QUrl("http://google.com");
+const QUrl KankoreAO::url = QUrl("http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/");
 
 KankoreAO::KankoreAO(QWidget *parent) :
     QMainWindow(parent),
@@ -18,6 +18,7 @@ KankoreAO::~KankoreAO()
 
 void KankoreAO::initWebvew()
 {
+    ui->webView->settings()->globalSettings()->setAttribute(QWebSettings::PluginsEnabled, true);
     ui->webView->load(url);
 }
 
