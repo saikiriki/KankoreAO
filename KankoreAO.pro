@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        kankoreao.cpp
+        kankoreao.cpp \
+    kankoreview.cpp
 
-HEADERS  += kankoreao.h
+HEADERS  += kankoreao.h \
+    kankoreview.h
 
 FORMS    += kankoreao.ui

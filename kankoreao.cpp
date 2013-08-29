@@ -18,8 +18,8 @@ KankoreAO::~KankoreAO()
 
 void KankoreAO::initWebvew()
 {
-    ui->webView->settings()->globalSettings()->setAttribute(QWebSettings::PluginsEnabled, true);
-    ui->webView->load(url);
+//    ui->webView->settings()->globalSettings()->setAttribute(QWebSettings::PluginsEnabled, true);
+//    ui->webView->load(url);
 }
 
 void KankoreAO::on_webView_urlChanged(const QUrl &arg1)

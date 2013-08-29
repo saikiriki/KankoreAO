@@ -25,13 +25,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QWebView" name="webView">
-        <property name="url">
-         <url>
-          <string>about:blank</string>
-         </url>
-        </property>
-       </widget>
+       <widget class="KankoreView" name="widget" native="true"/>
       </item>
      </layout>
     </item>
@@ -43,7 +37,7 @@
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>18</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -60,28 +54,12 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>QWebView</class>
+   <class>KankoreView</class>
    <extends>QWidget</extends>
-   <header>QtWebKitWidgets/QWebView</header>
+   <header>kankoreview.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>
- <connections>
-  <connection>
-   <sender>webView</sender>
-   <signal>titleChanged(QString)</signal>
-   <receiver>KankoreAO</receiver>
-   <slot>setWindowTitle(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>36</x>
-     <y>106</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>2</x>
-     <y>119</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
