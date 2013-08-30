@@ -2,26 +2,32 @@
 #define KANKOREVIEW_H
 
 #include <QWidget>
-#include <QWebView>
+#include <QUrl>
 
+namespace Ui {
+class KankoreView;
+}
 
 class KankoreView : public QWidget
 {
     Q_OBJECT
+    
 public:
     explicit KankoreView(QWidget *parent = 0);
-    
+    ~KankoreView();
+
 signals:
-    void titleChanged(const QString &);
-    void urlChanged(const QUrl &);
-public slots:
-    void setTitle(const QString &);
-    void setUrl(const QUrl &);
+    void urlChanged(const QUrl &url);
+    void titleChanged(const QString &title);
+
+private slots:
+    void setUrl(const QUrl &url);
+    void setTitle(const QString &title);
 
 private:
-    QWebView *webView;
-
-
+    Ui::KankoreView *ui;
+    void initWebvew();
+    static const QUrl url;
 };
 
 #endif // KANKOREVIEW_H

@@ -19,4 +19,5 @@ SOURCES += main.cpp\
 HEADERS  += kankoreao.h \
     kankoreview.h
 
-FORMS    += kankoreao.ui
+FORMS    += kankoreao.ui \
+    kankoreview.ui

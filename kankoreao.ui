@@ -25,7 +25,7 @@
        </widget>
       </item>
       <item>
-       <widget class="KankoreView" name="widget" native="true"/>
+       <widget class="KankoreView" name="kankoreView" native="true"/>
       </item>
      </layout>
     </item>
@@ -58,8 +58,29 @@
    <extends>QWidget</extends>
    <header>kankoreview.h</header>
    <container>1</container>
+   <slots>
+    <signal>urlChanged(QUrl)</signal>
+    <signal>titleChanged(QString)</signal>
+   </slots>
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>kankoreView</sender>
+   <signal>titleChanged(QString)</signal>
+   <receiver>KankoreAO</receiver>
+   <slot>setWindowTitle(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>40</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

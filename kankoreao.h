@@ -15,14 +15,13 @@ class KankoreAO : public QMainWindow
 public:
     explicit KankoreAO(QWidget *parent = 0);
     ~KankoreAO();
-    
+
 private slots:
-    void on_webView_urlChanged(const QUrl &arg1);
+    void on_kankoreView_urlChanged(const QUrl &);
 
 private:
-    void initWebvew();
     Ui::KankoreAO *ui;
-    static const QUrl url;
+
 };
 
 #endif // KANKOREAO_H
